@@ -78,15 +78,18 @@ exports.postLogin = (req, res, next) => {
                 }
             });
             if (exist) {
-                bcrypt.hash(password, 12)
-                    .then(hashedpassword => {
-                        console.log(hashedpassword);
-                        if (exist && hashedpassword == topPassword) {
+                bcrypt.compare(password, topPassword)
+                    .then(doMatch => {
+                        console.log(doMatch);
+                        if (exist && doMatch) {
                             console.log('loggedin');
                             res.redirect('http://localhost:3000/');
                         } else {
                             console.log('wrong password');
                         }
+                    })
+                    .catch(err => {
+                        console.log(err);
                     });
             }
 
