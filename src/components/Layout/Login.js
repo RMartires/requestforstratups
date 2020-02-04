@@ -12,8 +12,8 @@ const Login = () => {
             <form action="http://localhost:5000/login" method="POST">
               <p className="h2 text-center mb-4">Login up</p>
               <div className="grey-text">
-                <input type="email" id="email" name="email" placeholder="email" />
-                <input type="password" id="password" name="password" placeholder="password" />
+                <input class="form-control" type="email" id="email" name="email" placeholder="email" />
+                <input class="form-control" type="password" id="password" name="password" placeholder="password" />
               </div>
               <button type="submit">SignUp</button>
             </form>

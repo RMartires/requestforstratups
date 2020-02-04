@@ -22,13 +22,13 @@ class SignUp extends Component {
         <MDBContainer>
           <MDBRow>
             <MDBCol md="6">
-              <form action="http://localhost:5000/signup" method="POST">
+              <form class="login-form" action="http://localhost:5000/signup" method="POST">
                 <p className="h2 text-center mb-4">Sign up</p>
                 <div className="grey-text">
-                  <input type="text" id="username" name="username" placeholder="username" />
-                  <input type="email" id="email" name="email" placeholder="email" />
-                  <input type="password" id="password" name="password" placeholder="password" />
-                  <input type="password" id="confirmPassword" name="confirmPassword" placeholder="confirmpassword" />
+                  <input class="form-control" type="text" id="username" name="username" placeholder="username" />
+                  <input class="form-control" type="email" id="email" name="email" placeholder="email" />
+                  <input class="form-control" type="password" id="password" name="password" placeholder="password" />
+                  <input class="form-control" type="password" id="confirmPassword" name="confirmPassword" placeholder="confirmpassword" />
                 </div>
                 <button type="submit">SignUp</button>
               </form>
